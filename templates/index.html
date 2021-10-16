@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/cartas.css">
+</head>
+
+<body>
+    <!-- Barra -->
+    <nav class="navbar navbar-dark bg-dark">
+        <h1 class="display-5">JUEGO DEL GATO</h1>
+        <ul class="nav justify-content-center">
+        </ul>
+    </nav>
+
+    <form action="" method="post">
+        {%if winner %}
+        <h2>Ganador: {{winner}}</h2>
+        {%endif%}
+        <div class="row">
+            <div class="column">
+
+                <div class="celda"><input class="btn btn-default" type="submit" value="A" name="pos">
+                    <img src="{{ celda.A }}" alt="Blanco" height="40px"></div>
+            </div>
+            <div class="column">
+                <div class="celda"><input class="btn btn-default" type="submit" value="B" name="pos">
+                    <img src="{{ celda.B }}" alt="Blanco" height="40px"></div>
+            </div>
+            <div class="column">
+                <div class="celda"><input class="btn btn-default" type="submit" value="C" name="pos">
+                    <img src="{{ celda.C }}" alt="Blanco" height="40px"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="celda"><input class="btn btn-default" type="submit" value="D" name="pos">
+                    <img src="{{ celda.D }}" alt="Blanco" height="40px"></div>
+            </div>
+            <div class="column">
+                <div class="celda"><input class="btn btn-default" type="submit" value="E" name="pos">
+                    <img src="{{ celda.E }}" alt="Blanco" height="40px"></div>
+            </div>
+            <div class="column">
+                <div class="celda"><input class="btn btn-default" type="submit" value="F" name="pos">
+                    <img src="{{ celda.F }}" alt="Blanco" height="40px"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="celda"><input class="btn btn-default" type="submit" value="G" name="pos">
+                    <img src="{{ celda.G }}" alt="Blanco" height="40px"></div>
+            </div>
+            <div class="column">
+                <div class="celda"><input class="btn btn-default" type="submit" value="H" name="pos">
+                    <img src="{{ celda.H }}" alt="Blanco" height="40px"></div>
+            </div>
+            <div class="column">
+                <div class="celda"><input class="btn btn-default" type="submit" value="I" name="pos">
+                    <img src="{{ celda.I }}" alt="Blanco" height="40px"></div>
+            </div>
+        </div>
+        {%if winner%}
+        <div class="row">
+
+            <p align="center"><input class=grey style="height:75px;width:150px" type="submit" value="nuevo" name="pos"></input>
+            </p>
+
+        </div>
+        {%endif%}
+    </form>
+
+</body>
+
+</html>
